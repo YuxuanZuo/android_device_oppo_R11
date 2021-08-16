@@ -55,11 +55,6 @@
       "Name": "UClampMax",
       "Controller": "cpu",
       "File": "cpu.uclamp.max"
-    },
-    {
-      "Name": "FreezerState",
-      "Controller": "freezer",
-      "File": "cgroup.freeze"
     }
   ],
 
@@ -73,32 +68,6 @@
           {
             "Controller": "schedtune",
             "Path": "background"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Frozen",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "freezer",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Unfrozen",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "freezer",
-            "Path": "../"
           }
         }
       ]
@@ -592,32 +561,6 @@
           {
             "Controller": "memory",
             "Path": "system"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "FreezerDisabled",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "0"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "FreezerEnabled",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "1"
           }
         }
       ]
