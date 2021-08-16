@@ -26,7 +26,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #device         mount point      fstype        [device2] [length=]
-/dev/block/bootdevice/by-name/system       /	           ext4    ro,barrier=1                                                    wait
 /dev/block/bootdevice/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/bootdevice/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
 /dev/block/bootdevice/by-name/vendor       /vendor         ext4    ro,barrier=1                                                    wait,verify
@@ -44,8 +43,8 @@
 /dev/block/bootdevice/by-name/rpmbak       /rpmbak         emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/tz           /tz             emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/tzbak        /tzbak          emmc    defaults                                                        defaults
-/dev/block/bootdevice/by-name/modem_st1    /modemst1       emmc    defaults                                                        defaults
-/dev/block/bootdevice/by-name/modem_st2    /modemst2       emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/modemst1    /modem_st1       emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/modemst2    /modem_st2       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/oppostanvbk  /static_nv_bk   emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/oppodycnvbk  /oppodycnvbk    emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/LOGO         /logo           emmc    defaults                                                        defaults
