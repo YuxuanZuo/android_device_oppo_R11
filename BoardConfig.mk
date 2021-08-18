@@ -85,6 +85,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
+    ashmemd \
     ashmemd_aidl_interface-cpp \
     libashmemd_client \
     libicuuc \
@@ -93,6 +94,9 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libxml2 \
     libpuresoftkeymasterdevice \
     libkeymaster3device
+
+TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
+    $(TARGET_OUT_EXECUTABLES)/ashmemd
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
