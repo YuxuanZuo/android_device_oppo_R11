@@ -49,12 +49,12 @@
     {
       "Name": "UClampMin",
       "Controller": "cpu",
-      "File": "cpu.uclamp.min"
+      "File": "cpu.util.min"
     },
     {
       "Name": "UClampMax",
       "Controller": "cpu",
-      "File": "cpu.uclamp.max"
+      "File": "cpu.util.max"
     }
   ],
 
@@ -120,19 +120,6 @@
           {
             "Controller": "schedtune",
             "Path": "rt"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "CameraServicePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "schedtune",
-            "Path": "camera-daemon"
           }
         }
       ]
@@ -564,53 +551,6 @@
           }
         }
       ]
-    }
-  ],
-
-  "AggregateProfiles": [
-    {
-      "Name": "SCHED_SP_DEFAULT",
-      "Profiles": [ "TimerSlackNormal" ]
-    },
-    {
-      "Name": "SCHED_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "LowIoPriority", "TimerSlackHigh" ]
-    },
-    {
-      "Name": "SCHED_SP_FOREGROUND",
-      "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "SCHED_SP_TOP_APP",
-      "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "SCHED_SP_RT_APP",
-      "Profiles": [ "RealtimePerformance", "MaxIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_DEFAULT",
-      "Profiles": [ "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_BACKGROUND",
-      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "LowIoPriority", "TimerSlackHigh" ]
-    },
-    {
-      "Name": "CPUSET_SP_FOREGROUND",
-      "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_TOP_APP",
-      "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_SYSTEM",
-      "Profiles": [ "ServiceCapacityLow", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_RESTRICTED",
-      "Profiles": [ "ServiceCapacityRestricted", "TimerSlackNormal" ]
     }
   ]
 }

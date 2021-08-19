@@ -26,6 +26,7 @@
 #
 
 import /init.recovery.qcom_decrypt.rc
+import /init.oppo.rc
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
