@@ -1,3 +1,6 @@
+on boot
+    start ashmemd
+
 service ashmemd /system/bin/ashmemd
     user root
     group root
