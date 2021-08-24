@@ -22,5 +22,4 @@ PRODUCT_PLATFORM := sdm660
 PRODUCT_HARDWARE := R11
 
 PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
+    qcom_decrypt
