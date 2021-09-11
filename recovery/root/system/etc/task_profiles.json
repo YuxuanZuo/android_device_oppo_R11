@@ -22,21 +22,6 @@
     },
 
     {
-      "Name": "MemLimit",
-      "Controller": "memory",
-      "File": "memory.limit_in_bytes"
-    },
-    {
-      "Name": "MemSoftLimit",
-      "Controller": "memory",
-      "File": "memory.soft_limit_in_bytes"
-    },
-    {
-      "Name": "MemSwappiness",
-      "Controller": "memory",
-      "File": "memory.swappiness"
-    },
-    {
       "Name": "STuneBoost",
       "Controller": "schedtune",
       "File": "schedtune.boost"
@@ -365,86 +350,6 @@
     },
 
     {
-      "Name": "BlkIOForeground",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "blkio",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
-      "Name": "BlkIOBackground",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "blkio",
-            "Path": "bg"
-          }
-        }
-      ]
-    },
-
-    {
-      "Name": "LowIoPriority",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "blkio",
-            "Path": "background"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "NormalIoPriority",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "blkio",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
-      "Name": "HighIoPriority",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "blkio",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
-      "Name": "MaxIoPriority",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "blkio",
-            "Path": ""
-          }
-        }
-      ]
-    },
-
-    {
       "Name": "TimerSlackHigh",
       "Actions": [
         {
@@ -491,63 +396,6 @@
           {
             "Boost": "0",
             "Clamp": "30%"
-          }
-        }
-      ]
-    },
-
-    {
-      "Name": "LowMemoryUsage",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSoftLimit",
-            "Value": "16MB"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSwappiness",
-            "Value": "150"
-
-          }
-        }
-      ]
-    },
-    {
-      "Name": "HighMemoryUsage",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSoftLimit",
-            "Value": "512MB"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSwappiness",
-            "Value": "100"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SystemMemoryProcess",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "memory",
-            "Path": "system"
           }
         }
       ]
