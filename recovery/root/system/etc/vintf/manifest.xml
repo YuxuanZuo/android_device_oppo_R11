@@ -254,6 +254,16 @@
         </interface>
         <fqname>@1.0::IKeystoreExt/default</fqname>
     </hal>
+    <hal format="hidl">
+	    <name>vendor.qti.hardware.cryptfshw</name>
+	    <transport>hwbinder</transport>
+        <version>1.0</version>
+	    <interface>
+	        <name>ICryptfsHw</name>
+	        <instance>default</instance>
+	    </interface>
+	    <fqname>@1.0::ICryptfsHw/default</fqname>
+    </hal>
     <vendor-ndk>
         <version>28</version>
     </vendor-ndk>
