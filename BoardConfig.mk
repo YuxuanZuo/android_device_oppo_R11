@@ -87,6 +87,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_RECOVERY_DEVICE_MODULES += \
     ashmemd \
     ashmemd_aidl_interface-cpp \
+    libandroidicu \
     libashmemd_client \
     libicuuc \
     libicui18n \
