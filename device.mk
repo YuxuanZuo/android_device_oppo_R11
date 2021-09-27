@@ -24,6 +24,10 @@ PRODUCT_HARDWARE := R11
 PRODUCT_PACKAGES += \
     qcom_decrypt
 
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/R11/obj/SHARED_LIBRARIES/libcryptfs_hw_intermediates/libcryptfs_hw.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libcryptfs_hw.so \
+    $(OUT_DIR)/target/product/R11/obj/SHARED_LIBRARIES/vendor.qti.hardware.cryptfshw@1.0_intermediates/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/vendor.qti.hardware.cryptfshw@1.0.so
+
 # Apex libraries
 PRODUCT_COPY_FILES += \
     $(OUT_DIR)/target/product/R11/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
