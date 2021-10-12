@@ -1,0 +1,11 @@
+on late-fs
+    start vendor.cryptfshw-1-0
+
+service vendor.cryptfshw-1-0 /system/bin/vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+    interface vendor.qti.hardware.cryptfshw@1.0::ICryptfsHw default
+    user root
+    group root
+    disabled
+    oneshot
+    writepid /dev/cpuset/system-background/tasks
+    seclabel u:r:recovery:s0

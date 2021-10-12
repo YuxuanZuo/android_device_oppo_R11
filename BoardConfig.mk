@@ -94,10 +94,12 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libion \
     libxml2 \
     libpuresoftkeymasterdevice \
-    libkeymaster3device
+    libkeymaster3device \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
-    $(TARGET_OUT_EXECUTABLES)/ashmemd
+    $(TARGET_OUT_EXECUTABLES)/ashmemd \
+    $(TARGET_OUT_VENDOR_EXECUTABLES)/vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
