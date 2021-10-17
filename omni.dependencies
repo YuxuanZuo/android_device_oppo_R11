@@ -3,18 +3,6 @@
     "remote": "TeamWin",
     "repository": "android_device_qcom_twrp-common",
     "target_path": "device/qcom/twrp-common",
-    "revision": "android-10"
-  },
-  {
-    "remote": "LineageOS",
-    "repository": "android_vendor_qcom_opensource_cryptfs_hw",
-    "target_path": "vendor/qcom/opensource/cryptfs_hw",
-    "revision": "lineage-17.1"
-  },
-  {
-    "remote": "LineageOS",
-    "repository": "android_vendor_qcom_opensource_interfaces",
-    "target_path": "vendor/qcom/opensource/interfaces",
-    "revision": "lineage-17.1"
+    "revision": "android-9.0"
   }
 ]

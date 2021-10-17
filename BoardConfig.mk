@@ -85,25 +85,14 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
-    ashmemd \
-    ashmemd_aidl_interface-cpp \
-    libandroidicu \
-    libashmemd_client \
     libicuuc \
     libicui18n \
     libion \
     libxml2 \
     libpuresoftkeymasterdevice \
-    libkeymaster3device \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+    libkeymaster3device
 
-TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
-    $(TARGET_OUT_EXECUTABLES)/ashmemd \
-    $(TARGET_OUT_VENDOR_EXECUTABLES)/vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
@@ -112,7 +101,6 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libkeymaster3device.so
 
 TARGET_RECOVERY_FSTAB := device/oppo/R11/recovery.fstab
-TW_FORCE_USE_BUSYBOX := true
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TARGET_USE_CUSTOM_LUN_FILE_PATH :=  "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
@@ -120,7 +108,7 @@ TW_HAS_EDL_MODE := true
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_DECRYPTION := true
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
+TARGET_CRYPTFS_HW_PATH := device/oppo/R11/cryptfs_hw
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone1/temp"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
