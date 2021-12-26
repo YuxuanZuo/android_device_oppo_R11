@@ -2,21 +2,5 @@
   {
     "repository": "android_device_oppo_sdm660-common",
     "target_path": "device/oppo/sdm660-common"
-  },
-  {
-    "repository": "android_device_qcom_twrp-common",
-    "target_path": "device/qcom/twrp-common"
-  },
-  {
-    "remote": "LineageOS",
-    "repository": "android_vendor_qcom_opensource_cryptfs_hw",
-    "target_path": "vendor/qcom/opensource/cryptfs_hw",
-    "branch": "lineage-18.0"
-  },
-  {
-    "remote": "LineageOS",
-    "repository": "android_vendor_qcom_opensource_interfaces",
-    "target_path": "vendor/qcom/opensource/interfaces",
-    "branch": "lineage-18.1"
   }
 ]
